@@ -3,7 +3,7 @@ layout: home
 title: "About"
 ---
 
-I am a researcher in experimental fluid mechanics exploring <ins>turbulence dynamics</ins> of <ins>Newtonian</ins> and <ins>non-Newtonian fluids</ins> through <ins>particle image velocimetry</ins>.
+I am a researcher in experimental fluid mechanics focusing on <ins>turbulence dynamics</ins> of <ins>Newtonian</ins> and <ins>non-Newtonian fluids</ins>.
 
 I am currently a Ph.D. Candidate at the [Department of Hydraulic and Environmental Engineering](https://www.ing.uc.cl/hidraulica-y-ambiental/) of the [Pontificia Universidad Católica de Chile](https://www.uc.cl/) under the supervision of [Dr. Wernher Brevis](https://ing.uc.cl/cuerpo-docente/wernher-brevis-valenzuela/). My doctoral research investigates how non-Newtonian, **shear-dependent rheology alters the turbulent energy cascade** in homogeneous and isotropic turbulence.
 
