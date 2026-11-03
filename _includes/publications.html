@@ -1,0 +1,55 @@
+<div class="row g-5 mb-5">
+  <div>
+    <h3 class="fw-bold pb-3 mb-2 text-center">Publications</h3>
+    <div class="my-4 mb-5 text-center"> 
+      {{ content }}
+    </div>
+    {% for item in site.data.publications.index %}
+      {% assign number = forloop.length | minus: forloop.index0 %}
+      <div class="row mb-4">
+        <div class="col-md-1 text-md-end">
+          <h5><b>{{ number }}.</b></h5>
+        </div>
+        <div class="col-md-11">
+          <p class="mb-1">
+            {% if item.url and item.url != "" %}
+              {% if item.url contains "://" %}
+                <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" class="fw-bold">{{ item.name }}</a>
+              {% else %}
+                <a href="{{ site.github.url }}/{{ item.url }}" class="fw-bold">{{ item.name }}</a>
+              {% endif %}
+            {% else %}
+              <span class="fw-bold">{{ item.name }}</span>
+            {% endif %}
+          </p>
+          <p class="mb-2">{{ item.authors }} &mdash; <em>{{ item.info }}</em></p>
+          <p class="mb-2">
+            {% if item.abstract and item.abstract != "" %}
+            <span class="d-inline-block me-3">
+              [<a class="btn btn-link p-0 text-decoration-none" data-bs-toggle="collapse" href="#abstract-{{ forloop.index }}" role="button" aria-expanded="false" aria-controls="abstract-{{ forloop.index }}">
+                See Abstract
+              </a>]
+            </span>
+            {% endif %}
+            {% if item.fulltext and item.fulltext != "" %}
+            <span class="d-inline-block">
+              {% if item.fulltext contains "://" %}
+                [<a href="{{ item.fulltext }}" target="_blank" rel="noopener noreferrer">Full text</a>]
+              {% else %}
+                [<a href="{{ site.github.url }}/{{ item.fulltext }}" target="_blank">Full text</a>]
+              {% endif %}
+            </span>
+            {% endif %}
+          </p>
+          {% if item.abstract and item.abstract != "" %}
+          <div class="collapse" id="abstract-{{ forloop.index }}">
+            <div class="card card-body mt-2 mb-3 bg-light">
+              {{ item.abstract }}
+            </div>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,18 @@
+*.gem
+.bundle
+.jekyll-cache
+.sass-cache
+_site
+Gemfile.lock
+/.history
+
+# SVG files
+*.svg
+
+# PDF documents (papers are linked via arXiv/DOI, private PDFs are not tracked)
+*.pdf
+
+# CV files
+_data/cv/
+cv/
+cv.md

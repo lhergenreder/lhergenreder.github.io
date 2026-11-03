@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<div class="row g-5 mb-5">
+  <div class="col-md-3">
+    <div class="text-center">
+      <img src="{{ site.github.url }}/assets/img/foto.jpg" alt="Luciano Hergenreder" class="img-fluid rounded">
+    </div>
+  </div>
+  <div class="col-md-9">
+    <h3 class="fw-bold text-center mb-4">About</h3>
+    {{ content }}
+  </div>
+</div>
+
+<div class="row g-5 mb-2">
+  <div class="col-md-12">
+    <h3 class="fw-bold border-top pb-0 pt-4 mb-3 mt-2 text-center">
+      <a href="{{ site.github.url }}/updates" class="text-decoration-none">News</a>
+    </h3>
+    {% for post in site.data.news limit: 3 %}
+    <div class="row gx-0 mb-3 align-items-start">
+      <div class="col-md-2 d-flex align-items-start">
+        <p class="mb-0"><ins>{{ post.date }}</ins></p>
+      </div>
+      <div class="col-md-10">
+        <p class="mb-0">{{ post.desc | markdownify }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

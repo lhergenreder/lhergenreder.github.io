@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<div class="row g-5 mb-2">
+  <div class="col-md-12">
+    <h3 class="fw-bold pb-0 pt-4 mb-3 mt-2 text-center">Updates</h3>
+    {% for post in site.data.news %}
+    <div class="row gx-0 mb-3 align-items-start">
+      <div class="col-md-2 d-flex align-items-start">
+        <p class="mb-0"><ins>{{ post.date }}</ins></p>
+      </div>
+      <div class="col-md-10">
+        <p class="mb-0">{{ post.desc | markdownify }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

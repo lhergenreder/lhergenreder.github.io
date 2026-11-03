@@ -1,0 +1,12 @@
+<footer class="pt-5 my-5 text-muted border-top centered-footer">
+  <div class="row align-items-center">
+    <div class="col-sm-6 text-sm-start text-center mb-2 mb-sm-0">
+      <span class="small">&copy; {{ 'now' | date: "%Y" }} {{ site.title }}</span>
+    </div>
+    <div class="col-sm-6 text-sm-end text-center social-media-icons">
+      {% for item in site.data.settings.social %}
+        <a href="{{ item.link }}" class="ms-3 fs-5" target="_blank" rel="noopener noreferrer" title="{{ item.icon }}"><i class="fab fa-{{ item.icon }}"></i></a>
+      {% endfor %}
+    </div>
+  </div>
+</footer>
